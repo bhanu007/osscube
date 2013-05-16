@@ -1,0 +1,98 @@
+body{
+	background-color:#DBEBFF;
+}
+.artice{
+	height: auto;
+	width: 55%;
+	background-color: FFC8E3;
+	word-break:hyphenate;
+    margin-left: 24%;	
+	border-radius:4px;
+	text-align: center;
+
+}
+.header{
+	height: 75px;
+	width: 100%;
+	background-color:4FBDDD;
+	top:0px;
+	margin-top:-8px;
+	color: #eee;
+	border-radius:4px; 
+	font-size: 30px;
+	text-align: center;
+}
+.comment_box{
+	
+	text-align: left;
+	width: 400px;
+	background-color:#FFFFF0;
+	box-shadow: 2px 2px 2px 2px #f1f1f1;
+	margin-left: 100px;
+	
+}
+.comment_box input,textarea{
+	float: right;
+}
+.showcomment{
+	height: auto;
+	width: 600px;
+	margin-left: 26%;
+	box-shadow: 1px 1px 2px 2px #4682B4;
+	background-color:#66CDAA;
+}
+.cmnt{
+	border:1px inset;
+	border-radius:4px;
+	height: auto;
+	width: 500px;
+	box-shadow: 1px 1px 2px 2px #1E90FF;
+	background-color: #eee;
+	
+}
+.t{
+	float: right;
+}
+.ctext{
+	margin-top:30px;
+	margin-left: 70px;
+	font-size:  large;
+}
+.popup{
+	margin-top:50px;
+	margin-left:100px;
+	display: none;
+	height: 300px;
+	width: 400px;
+	border:1px inset;
+	box-shadow: 2px 2px 2px 2px #f1f1f1;
+	background-color: #f2f2f2;
+	border-radius:4px;
+}
+#close{
+cursor:pointer;
+float:right ;
+margin-right:2px;
+font-weight: bold;
+font-family: sans-serif;
+margin-top:0.5px;
+font-size:16px;
+
+}
+#latest {
+	display: none;
+}
+.subcomment{
+	border:1px solid;
+	height: auto;
+	width: auto;
+	border-radius:4px;
+	box-shadow: 1px 1px 1px 1px #f1f1f1;
+}
+.floatr{
+	float: right;
+}
+.name{
+	color:blue;
+	float:left;
+}
