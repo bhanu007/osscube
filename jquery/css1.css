@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+text-align:center;
+width:500px;
+margin:auto;
+border-top:1px solid #FFFFFF;
+
+
+}
+dl{}
+dt{
+cursor:pointer;
+font-weight:bold;
+font-size:1.5em;
+line-height:2em;
+background-color:#CCCCCC;
+border-bottom:1px solid #808080;
+
+
+}
+dd{
+
+
+margin:0px;
+padding:1em;}
+.hide
+{
+
+display:none;}

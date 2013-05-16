@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>clonning using jquery</title>
+<script src="jquery.js">
+</script>
+ 
+</head>
+
+<body>
+<h1> hi i m original </h1>
+
+<script>
+(function()
+{
+$("h1").click(function(){
+$(this).clone(true).appendTo("body"); // if it become false than it wont add any new element on clickin thr latest one.
+
+});
+
+})();
+ </script>
+</body>
+</html>

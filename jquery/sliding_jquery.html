@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" href="css1.css" />
+<script src="jquery.js">
+</script>
+ 
+ 
+</head>
+
+<body>
+
+
+<dl> 
+<dt> What is you name?</dt>
+  <dd> bhanu gill</dd>
+<dt> What is you name?</dt>
+  <dd> bhanu gill</dd>
+<dt> What is you name?</dt>
+  <dd> bhanu gill</dd>
+<dt> What is you name?</dt>
+  <dd> bhanu gill</dd>
+<dt> What is you name?</dt>
+  <dd> bhanu gill</dd>
+<dt> What is you name?</dt>
+  <dd> bhanu gill</dd>
+
+
+</dl>
+<script> 
+$(document).ready(function(){
+$("dd").filter(":nth-child(n+4)").addClass("hide");
+$("dt").mouseenter(function()
+{$(this).next().slideDown().siblings("dd").slideUp();
+}
+);
+ })();
+
+
+</script>
+ 
+ 
+</body>
+</html>
