@@ -10,7 +10,7 @@ Email <input type="text" id="email" name="email" ><br>
 <span id="result" name="result">   </span>
 <input type=button onclick="c()" value='butoon'>
 </form>
-
+<div id="slideme"> </div>
 
 <script>
 
@@ -23,12 +23,13 @@ function c(){
         data: 'name='+name+'&email='+email,
         success: function(result){
         $("#result").html(result);
+       
    }
 });
 	
 //	$('#result').load('process.php','name='+name+'&email='+email	)
 }
 
-
+$("#slideme").slider();
 
 </script>
