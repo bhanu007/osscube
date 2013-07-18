@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Validation Page</title>
+<link rel="stylesheet" type="text/css" href="reg.css" >
+<script type="text/javascript">
+
+
+function valid()
+{
+
+var uname=document.forms["form1"]["uname"].value;
+var pwd=document.forms["form1"]["pwd"].value;
+var cpwd=document.forms["form1"]["cpwd"].value;
+var fname=document.forms["form1"]["f"].value;
+var lname=document.forms["form1"]["l"].value;
+var eid=document.forms["form1"]["e"].value;
+var phone=document.forms["form1"]["phone"].value;
+var d = document.forms["form1"]["dd"].value;
+var m = document.forms["form1"]["mm"].value;
+var y = document.forms["form1"]["yy"].value;
+		
+			
+		
+
+
+    if(uname.length<6) // check the user name range must be greater then 6
+    {
+    alert(" charcters entred must be in the range 6 -20");
+	return false;
+    
+    }
+    if(uname.length>20) // check the user name range must be less then 20
+    {
+    alert(" charcters entred must be in the range 6 -20");
+	return false;
+
+    }
+
+    if(pwd.length<6) // password must conatin atleast 6 charchetrs
+    {
+    alert("password must conatin atleast 6 charchters");
+	return false;
+
+    }
+
+    if(pwd.length>15) // password cannot conatin more than 15 characters 
+    {
+    alert(" password can not conatin more than 15 charchters");
+	return false;
+
+    }
+
+    
+	if(pwd!=cpwd) // match the valus of password and confirm password
+{
+alert("password not match . Please enter the correct password!!!!");
+return false;
+}
+
+if(fname.length>30) // check the length of first name
+    
+    {
+    alert("First name canot contain more than 15 chars");
+	return false;
+    }
+if(lname.length>30) // check the length of last name
+    
+{
+alert("Last name canot contain more than 15 chars");
+return false;
+}
+
+if(fname.length==0) // first name can not be empty
+    
+{
+alert("please enter your first name ");
+return false;
+}
+if(lname.length==0) // last name can not be empty
+    
+{
+alert("please enter your last name ");
+return false;
+}
+  // Email validation
+var x=document.forms["form1"]["e"].value;
+var atpos=x.indexOf("@");
+var dotpos=x.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+  {
+  alert("Not a valid e-mail address");
+  return false;   }
+
+
+
+
+// Alphanumeric validation of usename
+var j=0;
+for(var i=0;i<uname.length;i++)
+{
+    if((uname.charAt(i)>='A' && uname.charAt(i)<='Z')||(uname.charAt(i)>='a' && uname.charAt(i)<='z')
+    ||(uname.charAt(i)>=48 && uname.charAt(i)<=57))
+        { j=0;}
+		
+		else 
+		{ 
+		j=1; alert("username is incorrect");
+		 return false;
+		}
+    
+    
+ }
+ 
+ if (j==0)
+ {
+  return true;
+ 
+ }
+
+}
+
+// Age validation
+
+if((dd<0 || d>31) || (m<0 || m>12) || (y<1900 || y>2012 ))
+			{
+			 alert("Age must be greater then 18")
+			return false;
+
+             }
+
+</script>
+
+</head>
+
+
+
+
+<form name="form1" >
+<body background="i2.jpg"> 
+ 
+
+<h1> <p align="right">  Welcome to Registration Page </center></p> </h1> 
+<div id="div1" >
+UserName: * <input type="text" id="uname" align="absmiddle" /> <br> 
+<br> 
+Password :* <input type="password" id="pwd" /> <br> <br> 
+Confirm Password : * <input type="password" id="cpwd" /> <br> <br>   
+First Name :* <input type="text" id="f" /> <br>  <br> 
+Last Name : <input type="text" id="l" /> <br> <br> 
+Email :<input type="text" id="e" size="30" /> <br> <br> 
+Date Of Birth (dd/mm/yyyy):* <input type="text" id="dd" name="dd" size="4"> 	
+			<input type="text" id="mm" name="mm" size="4" > 
+			<input type="text" id="yy" name="yy" size="4" ><br/><br />
+Address : <textarea row="20" cols="20" id="add" /> 
+</textarea> <br> <br> <br />
+State : <select name="state">  
+<option selected="" value="Default">(Please select a state...)</option>  
+<option value="dl">Delhi</option>  
+<option value="cn">Chandigarh</option>  
+<option value="mb">Mumbai</option>  
+<option value="ga">Goa</option>  
+<option value="up">Uttar Pradesh</option>  
+</select>    <br> <br />
+
+Phone: <input type="text" id="phone" /> <br> <br /> <br />
+<input type="button" value="Submit" onclick="valid()" >
+</div>
+</body>
+</form>
+
+</html>
