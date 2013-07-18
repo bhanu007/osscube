@@ -1,0 +1,84 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"></head><body><form method="GET" action="reg1.php">
+<style> 
+#div1{
+	margin-left:50px;
+ height:120px;
+ width:120px;
+ border-style: groove;
+	
+	
+	
+}
+#div2{
+	margin-left:150px;
+	
+ height:120px;
+ width:120px;
+ border-style: groove;
+	
+}
+
+
+#div3{
+margin-left:250px;	
+ height:150px;
+ width:150px;
+ border-style: groove;
+	
+	
+}
+
+
+
+</style>
+
+<script language="javascript">
+    function chngebck (id)
+    {    
+        switch (id)
+        {
+            case 'div1':
+                document.getElementById('div1').style.backgroundColor = "red";                
+                break;
+                
+            case 'div2':
+           	 document.getElementById('div2').style.backgroundColor = "yellow";
+                break;
+            
+            case 'div3':
+              	 document.getElementById('div3').style.backgroundColor = "green";
+                break;    
+        }
+    }
+    function pop()
+    {
+ window.open("popup.php","p","height=400","width=400");
+
+        }
+</script>
+
+<div id="div1"> 
+
+<input id="b1" onclick="chngebck('div1')" value="Button1" type="button">
+
+</div>
+
+
+<div id="div2"> 
+
+<input id="b2" onclick="chngebck('div2')" value="Button2" type="button">
+</div>
+
+<div style="background-color: green;" id="div3">
+<input id="b3" onclick="chngebck('div3')" value="Button3" type="button">
+</div>
+
+<a href="#" onclick="pop()"> Open </a>
+
+
+
+
+
+
+</form></body></html>
